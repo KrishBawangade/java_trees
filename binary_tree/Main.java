@@ -8,6 +8,11 @@ public class Main {
         Scanner sc = new Scanner(System.in);
 
         bt.populate(sc);
-        bt.prettyDisplay();
+        // bt.prettyDisplay();
+        bt.preOrder();
+        System.out.println("\n");
+        bt.inOrder();
+        System.out.println("\n");
+        bt.postOrder();
     }
 }

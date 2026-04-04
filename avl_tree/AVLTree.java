@@ -94,8 +94,8 @@ public class AVLTree {
         c.right = p;
         p.left = rightSubtree;
 
-        p.height = Math.max(height(p.left), height(p.right) + 1);
-        c.height = Math.max(height(c.left), height(c.right) +1);
+        p.height = Math.max(height(p.left), height(p.right))+1;
+        c.height = Math.max(height(c.left), height(c.right))+1;
 
         return c;
     }
@@ -106,8 +106,8 @@ public class AVLTree {
         c.left = p;
         p.right = leftSubtree;
 
-        p.height = Math.max(height(p.left) + 1, height(p.right));
-        c.height = Math.max(height(c.left) + 1, height(c.right));
+        p.height = Math.max(height(p.left), height(p.right))+1;
+        c.height = Math.max(height(c.left), height(c.right))+1;
 
         return c;
     }

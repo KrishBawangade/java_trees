@@ -9,10 +9,12 @@ public class Main {
 
         bt.populate(sc);
         // bt.prettyDisplay();
-        bt.preOrder();
-        System.out.println("\n");
-        bt.inOrder();
-        System.out.println("\n");
-        bt.postOrder();
+        // bt.preOrder();
+        // System.out.println("\n");
+        // bt.inOrder();
+        // System.out.println("\n");
+        // bt.postOrder();
+
+        bt.breadthFirstSearchDisplay();
     }
 }

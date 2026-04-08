@@ -1,6 +1,6 @@
 package binary_tree;
 
-import java.util.Scanner;
+import java.util.*;
 
 public class BinaryTree{
 
@@ -122,6 +122,25 @@ public class BinaryTree{
         postOrder(node.right);
         System.out.print(node.value+ " ");
     }
+
+    public void breadthFirstSearchDisplay(){
+        Queue<Node> queue = new LinkedList<>();
+        queue.add(root);
+        while(!queue.isEmpty()){
+            Node node = queue.remove();
+            System.out.print(node.value+ " ");
+            
+            if(node.left!=null){
+                queue.add(node.left);
+            }
+    
+            if(node.right!=null){
+                queue.add(node.right);
+            }
+
+        }
+    }
+
 
     private static class Node{
         int value;

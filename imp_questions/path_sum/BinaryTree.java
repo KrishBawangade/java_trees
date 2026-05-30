@@ -42,7 +42,6 @@ public class BinaryTree {
 
     }
 
-
     public void prettyDisplay(){
         prettyDisplay(root, 0);
     }

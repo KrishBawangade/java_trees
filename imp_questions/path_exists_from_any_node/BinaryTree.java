@@ -67,8 +67,6 @@ public class BinaryTree{
 
     }
 
-    int i=0;
-
     public int countPaths(int targetSum) {
         return count(root, targetSum, new ArrayList<>());
     }
@@ -96,6 +94,31 @@ public class BinaryTree{
         path.remove(path.size()-1);
 
         return count;
+    }
+
+    List<List<Integer>> findPaths(int targetSum){
+        List<Integer> path = new ArrayList<>();
+        List<List<Integer>> paths = new ArrayList<>();
+        find(root, targetSum, path, paths)
+        return paths;
+    }
+
+    List<List<Integer>> find(TreeNode node, int targetSum, List<Integer> path, List<List<Integer>> paths){
+        if(node == null){
+            return new ArrayList<>();
+        }
+
+        path.add(node.val);
+
+        if(node.val == targetSum && node.left == null && node.right == null){
+            return new ArrayList<>(path);
+        }else{
+            find(node.left, targetSum - node.val, path, paths);
+            find(node.right, targetSum - node.val, path, paths);
+        }
+
+        path.remove(path.size()-1);
+        return paths;
     }
 
 
